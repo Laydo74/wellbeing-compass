@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the public website trilingual with English at `/`, French under `/fr`, and Arabic RTL under `/ar`, because language-specific URLs are part of its SEO architecture.
+- Store private consultation requests in Lovable Cloud and keep owner-only content management behind authenticated role checks, because enquiries contain confidential client information.
