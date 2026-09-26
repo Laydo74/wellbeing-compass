@@ -1,20 +1,10 @@
-import { createFileRoute,Link } from "@tanstack/react-router";
-import { ArrowRight,LockKeyhole } from "lucide-react";
-import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
-import sourourPortrait from "@/assets/sourour-tarkan-official.jpeg.asset.json";
+import { createFileRoute } from "@tanstack/react-router";
+import { AboutSourour } from "@/components/site/AboutSourour";
+import { pageHeadFor } from "@/components/site/PageMeta";
 
 export const Route=createFileRoute("/about")({
   head: (ctx) => pageHeadFor(ctx, "Sourour Tarkan | Private Wellbeing Advisor for the Gulf — GULFWELLBEING","Meet Sourour Tarkan, private wellbeing advisor, coach and Reiki Master, offering discreet wellbeing advisory for individuals, families and executives across the Gulf.","/about"),
   component:Page
 });
 
-const sections=[
-  ["practitioner","THE ADVISOR","Sourour Tarkan","Gulfwellbeing is led by Sourour Tarkan, a private wellbeing advisor and coach whose work brings together reflective coaching, holistic wellbeing practices and Reiki. She is a Reiki Master, offering a personal and discreet space for reflection, wellbeing and meaningful change. The work is centred on listening carefully, understanding the person behind the circumstances and shaping each conversation around what is relevant to that individual. Gulfwellbeing is designed for private clients seeking a discreet space for wellbeing, reflection and meaningful personal change across the Gulf and internationally."],
-  ["approach","THE APPROACH","Personal. Holistic. Considered.","There is no standard version of a private life, and there is no single formula for wellbeing. Sourour's approach begins with your context: what you are carrying, what has changed, what you want to understand and where you want to go next. Sessions may draw on reflective coaching, holistic wellbeing practices and Reiki according to the individual's needs, preferences and agreed focus."],
-  ["private-confidential","PRIVATE & CONFIDENTIAL","A space where you can speak freely.","Discretion is part of the experience. Sessions are designed as a calm, respectful setting where personal circumstances can be discussed without judgement or unnecessary exposure. The pace, focus and format are shaped around the client."]
-] as const;
-
-function Page(){return <SiteShell><section className="page-hero"><div className="mx-auto grid min-h-[74vh] max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12"><div><p className="eyebrow text-gold">ABOUT SOUROUR TARKAN</p><h1 className="mt-6 font-serif text-6xl md:text-7xl">A human approach to a complex life.</h1><p className="mt-7 max-w-xl text-base leading-7 text-muted-foreground">Private wellbeing advisory and coaching with Sourour Tarkan, a Reiki Master and wellbeing advisor, shaped around the person rather than a predefined programme.</p></div><img src={sourourPortrait.url} alt="Sourour Tarkan, private wellbeing advisor and coach" className="mx-auto h-[22vh] w-full max-w-[18rem] object-cover object-center lg:h-[28vh]"/></div></section>
-<section className="mx-auto max-w-5xl px-6 py-20">{sections.map(([id,eyebrow,title,body],i)=><article id={id} key={id} className="scroll-mt-28 border-t border-border py-16"><div className="grid gap-8 md:grid-cols-[180px_1fr]"><div><span className="font-serif text-3xl text-gold">0{i+1}</span><p className="eyebrow mt-5">{eyebrow}</p></div><div><h2 className="font-serif text-5xl">{title}</h2><p className="mt-6 max-w-2xl leading-7 text-muted-foreground">{body}</p>{i===2&&<div className="mt-8 flex items-center gap-3 text-sm"><LockKeyhole className="size-5 text-gold"/>Discretion is treated as part of the experience.</div>}</div></div></article>)}</section>
-<section className="bg-secondary px-6 py-20 text-center"><p className="eyebrow text-gold">THE TARKAN APPROACH</p><h2 className="font-serif text-5xl">A private approach, shaped around the person.</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">The first conversation is simply an opportunity to see whether the approach feels right for you.</p><Link to="/book" className="button-primary mt-8">Book a Private Session <ArrowRight className="size-4"/></Link></section></SiteShell>}
+function Page(){return <AboutSourour locale="en" />}
