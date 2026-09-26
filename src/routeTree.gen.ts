@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutIndexRouteImport } from './routes/about/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BookIndexRouteImport } from './routes/book/index'
+import { Route as BusinessIndexRouteImport } from './routes/business/index'
+import { Route as MenIndexRouteImport } from './routes/men/index'
+import { Route as WellbeingIndexRouteImport } from './routes/wellbeing/index'
+import { Route as WomenIndexRouteImport } from './routes/women/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookIndexRoute = BookIndexRouteImport.update({
+  id: '/book/',
+  path: '/book/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessIndexRoute = BusinessIndexRouteImport.update({
+  id: '/business/',
+  path: '/business/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenIndexRoute = MenIndexRouteImport.update({
+  id: '/men/',
+  path: '/men/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WellbeingIndexRoute = WellbeingIndexRouteImport.update({
+  id: '/wellbeing/',
+  path: '/wellbeing/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WomenIndexRoute = WomenIndexRouteImport.update({
+  id: '/women/',
+  path: '/women/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about/': typeof AboutIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/book/': typeof BookIndexRoute
+  '/business/': typeof BusinessIndexRoute
+  '/men/': typeof MenIndexRoute
+  '/wellbeing/': typeof WellbeingIndexRoute
+  '/women/': typeof WomenIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutIndexRoute
+  '/blog': typeof BlogIndexRoute
+  '/book': typeof BookIndexRoute
+  '/business': typeof BusinessIndexRoute
+  '/men': typeof MenIndexRoute
+  '/wellbeing': typeof WellbeingIndexRoute
+  '/women': typeof WomenIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about/': typeof AboutIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/book/': typeof BookIndexRoute
+  '/business/': typeof BusinessIndexRoute
+  '/men/': typeof MenIndexRoute
+  '/wellbeing/': typeof WellbeingIndexRoute
+  '/women/': typeof WomenIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about/'
+    | '/blog/'
+    | '/book/'
+    | '/business/'
+    | '/men/'
+    | '/wellbeing/'
+    | '/women/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/book'
+    | '/business'
+    | '/men'
+    | '/wellbeing'
+    | '/women'
+  id:
+    | '__root__'
+    | '/'
+    | '/about/'
+    | '/blog/'
+    | '/book/'
+    | '/business/'
+    | '/men/'
+    | '/wellbeing/'
+    | '/women/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  BookIndexRoute: typeof BookIndexRoute
+  BusinessIndexRoute: typeof BusinessIndexRoute
+  MenIndexRoute: typeof MenIndexRoute
+  WellbeingIndexRoute: typeof WellbeingIndexRoute
+  WomenIndexRoute: typeof WomenIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book/': {
+      id: '/book/'
+      path: '/book'
+      fullPath: '/book/'
+      preLoaderRoute: typeof BookIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business/': {
+      id: '/business/'
+      path: '/business'
+      fullPath: '/business/'
+      preLoaderRoute: typeof BusinessIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/men/': {
+      id: '/men/'
+      path: '/men'
+      fullPath: '/men/'
+      preLoaderRoute: typeof MenIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wellbeing/': {
+      id: '/wellbeing/'
+      path: '/wellbeing'
+      fullPath: '/wellbeing/'
+      preLoaderRoute: typeof WellbeingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/women/': {
+      id: '/women/'
+      path: '/women'
+      fullPath: '/women/'
+      preLoaderRoute: typeof WomenIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  BookIndexRoute: BookIndexRoute,
+  BusinessIndexRoute: BusinessIndexRoute,
+  MenIndexRoute: MenIndexRoute,
+  WellbeingIndexRoute: WellbeingIndexRoute,
+  WomenIndexRoute: WomenIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

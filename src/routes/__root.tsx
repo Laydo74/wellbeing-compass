@@ -30,13 +30,13 @@ function Navbar() {
         <div className="hidden items-center gap-6 lg:flex">
           <nav className="flex items-center gap-6">
             <Link to="/" className="nav-link">Home</Link>
-            <Link to="/" className="nav-link">Wellbeing</Link>
-            <Link to="/" className="nav-link">Women</Link>
-            <Link to="/" className="nav-link">Men</Link>
-            <Link to="/" className="nav-link">Business</Link>
+            <Link to="/wellbeing" className="nav-link">Wellbeing</Link>
+            <Link to="/women" className="nav-link">Women</Link>
+            <Link to="/men" className="nav-link">Men</Link>
+            <Link to="/business" className="nav-link">Business</Link>
             <Link to="/" className="nav-link">Approach</Link>
-            <Link to="/" className="nav-link">About</Link>
-            <Link to="/" className="nav-book">Book</Link>
+            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/book" className="nav-book">Book</Link>
           </nav>
           
           <div className="flex items-center gap-2 border-s border-border ps-4 text-xs">
@@ -64,7 +64,7 @@ function Navbar() {
           <Link to="/" className="text-lg font-serif">Wellbeing</Link>
           <Link to="/" className="text-lg font-serif">Approach</Link>
           <Link to="/" className="text-lg font-serif">About</Link>
-          <Link to="/" className="button-gold justify-center">Book Now</Link>
+          <Link to="/book" className="button-gold justify-center">Book Now</Link>
         </div>
       )}
     </header>
@@ -92,9 +92,9 @@ function Footer() {
           <div>
             <h4 className="font-serif text-lg mb-6">Navigation</h4>
             <ul className="space-y-4 text-sm text-primary-foreground/60">
-              <li><Link to="/">Wellbeing</Link></li>
+              <li><Link to="/wellbeing">Wellbeing</Link></li>
               <li><Link to="/">The Approach</Link></li>
-              <li><Link to="/">About</Link></li>
+              <li><Link to="/about">About</Link></li>
               <li><Link to="/">Contact</Link></li>
             </ul>
           </div>
