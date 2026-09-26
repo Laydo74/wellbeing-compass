@@ -17,6 +17,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as BusinessRouteImport } from './routes/business'
+import { Route as FrRouteImport } from './routes/fr'
 import { Route as MenRouteImport } from './routes/men'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -54,6 +55,17 @@ import { Route as BusinessFounderWellbeingRouteImport } from './routes/business/
 import { Route as BusinessLeadershipClarityRouteImport } from './routes/business/leadership-clarity'
 import { Route as BusinessTeamWellbeingRouteImport } from './routes/business/team-wellbeing'
 import { Route as BusinessVipConciergeWellbeingRouteImport } from './routes/business/vip-concierge-wellbeing'
+import { Route as FrIndexRouteImport } from './routes/fr/index'
+import { Route as FrAboutRouteImport } from './routes/fr/about'
+import { Route as FrBlogRouteImport } from './routes/fr/blog'
+import { Route as FrBookRouteImport } from './routes/fr/book'
+import { Route as FrBusinessRouteImport } from './routes/fr/business'
+import { Route as FrMenRouteImport } from './routes/fr/men'
+import { Route as FrPrivacyRouteImport } from './routes/fr/privacy'
+import { Route as FrTermsRouteImport } from './routes/fr/terms'
+import { Route as FrTheTarkanApproachRouteImport } from './routes/fr/the-tarkan-approach'
+import { Route as FrWellbeingRouteImport } from './routes/fr/wellbeing'
+import { Route as FrWomenRouteImport } from './routes/fr/women'
 import { Route as MenFatherhoodRouteImport } from './routes/men/fatherhood'
 import { Route as WellbeingEmotionalBalanceRouteImport } from './routes/wellbeing/emotional-balance'
 import { Route as WellbeingLifeTransitionsRouteImport } from './routes/wellbeing/life-transitions'
@@ -70,6 +82,13 @@ import { Route as ArBusinessFounderWellbeingRouteImport } from './routes/ar/busi
 import { Route as ArBusinessLeadershipClarityRouteImport } from './routes/ar/business/leadership-clarity'
 import { Route as ArBusinessTeamWellbeingRouteImport } from './routes/ar/business/team-wellbeing'
 import { Route as ArBusinessVipConciergeWellbeingRouteImport } from './routes/ar/business/vip-concierge-wellbeing'
+import { Route as FrBusinessBurnoutPreventionRouteImport } from './routes/fr/business/burnout-prevention'
+import { Route as FrBusinessCorporateAdvisoryRouteImport } from './routes/fr/business/corporate-advisory'
+import { Route as FrBusinessExecutiveWellbeingRouteImport } from './routes/fr/business/executive-wellbeing'
+import { Route as FrBusinessFounderWellbeingRouteImport } from './routes/fr/business/founder-wellbeing'
+import { Route as FrBusinessLeadershipClarityRouteImport } from './routes/fr/business/leadership-clarity'
+import { Route as FrBusinessTeamWellbeingRouteImport } from './routes/fr/business/team-wellbeing'
+import { Route as FrBusinessVipConciergeWellbeingRouteImport } from './routes/fr/business/vip-concierge-wellbeing'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -108,6 +127,11 @@ const BookRoute = BookRouteImport.update({
 const BusinessRoute = BusinessRouteImport.update({
   id: '/business',
   path: '/business',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrRoute = FrRouteImport.update({
+  id: '/fr',
+  path: '/fr',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MenRoute = MenRouteImport.update({
@@ -311,6 +335,61 @@ const BusinessVipConciergeWellbeingRoute =
     path: '/vip-concierge-wellbeing',
     getParentRoute: () => BusinessRoute,
   } as any)
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrAboutRoute = FrAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBlogRoute = FrBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBookRoute = FrBookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBusinessRoute = FrBusinessRouteImport.update({
+  id: '/business',
+  path: '/business',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrMenRoute = FrMenRouteImport.update({
+  id: '/men',
+  path: '/men',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrPrivacyRoute = FrPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrTermsRoute = FrTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrTheTarkanApproachRoute = FrTheTarkanApproachRouteImport.update({
+  id: '/the-tarkan-approach',
+  path: '/the-tarkan-approach',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrWellbeingRoute = FrWellbeingRouteImport.update({
+  id: '/wellbeing',
+  path: '/wellbeing',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrWomenRoute = FrWomenRouteImport.update({
+  id: '/women',
+  path: '/women',
+  getParentRoute: () => FrRoute,
+} as any)
 const MenFatherhoodRoute = MenFatherhoodRouteImport.update({
   id: '/fatherhood',
   path: '/fatherhood',
@@ -401,6 +480,47 @@ const ArBusinessVipConciergeWellbeingRoute =
     path: '/vip-concierge-wellbeing',
     getParentRoute: () => ArBusinessRoute,
   } as any)
+const FrBusinessBurnoutPreventionRoute =
+  FrBusinessBurnoutPreventionRouteImport.update({
+    id: '/burnout-prevention',
+    path: '/burnout-prevention',
+    getParentRoute: () => FrBusinessRoute,
+  } as any)
+const FrBusinessCorporateAdvisoryRoute =
+  FrBusinessCorporateAdvisoryRouteImport.update({
+    id: '/corporate-advisory',
+    path: '/corporate-advisory',
+    getParentRoute: () => FrBusinessRoute,
+  } as any)
+const FrBusinessExecutiveWellbeingRoute =
+  FrBusinessExecutiveWellbeingRouteImport.update({
+    id: '/executive-wellbeing',
+    path: '/executive-wellbeing',
+    getParentRoute: () => FrBusinessRoute,
+  } as any)
+const FrBusinessFounderWellbeingRoute =
+  FrBusinessFounderWellbeingRouteImport.update({
+    id: '/founder-wellbeing',
+    path: '/founder-wellbeing',
+    getParentRoute: () => FrBusinessRoute,
+  } as any)
+const FrBusinessLeadershipClarityRoute =
+  FrBusinessLeadershipClarityRouteImport.update({
+    id: '/leadership-clarity',
+    path: '/leadership-clarity',
+    getParentRoute: () => FrBusinessRoute,
+  } as any)
+const FrBusinessTeamWellbeingRoute = FrBusinessTeamWellbeingRouteImport.update({
+  id: '/team-wellbeing',
+  path: '/team-wellbeing',
+  getParentRoute: () => FrBusinessRoute,
+} as any)
+const FrBusinessVipConciergeWellbeingRoute =
+  FrBusinessVipConciergeWellbeingRouteImport.update({
+    id: '/vip-concierge-wellbeing',
+    path: '/vip-concierge-wellbeing',
+    getParentRoute: () => FrBusinessRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -410,6 +530,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRoute
   '/business': typeof BusinessRouteWithChildren
+  '/fr': typeof FrRouteWithChildren
   '/men': typeof MenRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
@@ -446,6 +567,16 @@ export interface FileRoutesByFullPath {
   '/business/leadership-clarity': typeof BusinessLeadershipClarityRoute
   '/business/team-wellbeing': typeof BusinessTeamWellbeingRoute
   '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/fr/about': typeof FrAboutRoute
+  '/fr/blog': typeof FrBlogRoute
+  '/fr/book': typeof FrBookRoute
+  '/fr/business': typeof FrBusinessRouteWithChildren
+  '/fr/men': typeof FrMenRoute
+  '/fr/privacy': typeof FrPrivacyRoute
+  '/fr/terms': typeof FrTermsRoute
+  '/fr/the-tarkan-approach': typeof FrTheTarkanApproachRoute
+  '/fr/wellbeing': typeof FrWellbeingRoute
+  '/fr/women': typeof FrWomenRoute
   '/men/fatherhood': typeof MenFatherhoodRoute
   '/wellbeing/emotional-balance': typeof WellbeingEmotionalBalanceRoute
   '/wellbeing/life-transitions': typeof WellbeingLifeTransitionsRoute
@@ -454,6 +585,7 @@ export interface FileRoutesByFullPath {
   '/women/confidence-self-trust': typeof WomenConfidenceSelfTrustRoute
   '/women/motherhood': typeof WomenMotherhoodRoute
   '/ar/': typeof ArIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/business/burnout-prevention': typeof ArBusinessBurnoutPreventionRoute
   '/ar/business/corporate-advisory': typeof ArBusinessCorporateAdvisoryRoute
@@ -462,6 +594,13 @@ export interface FileRoutesByFullPath {
   '/ar/business/leadership-clarity': typeof ArBusinessLeadershipClarityRoute
   '/ar/business/team-wellbeing': typeof ArBusinessTeamWellbeingRoute
   '/ar/business/vip-concierge-wellbeing': typeof ArBusinessVipConciergeWellbeingRoute
+  '/fr/business/burnout-prevention': typeof FrBusinessBurnoutPreventionRoute
+  '/fr/business/corporate-advisory': typeof FrBusinessCorporateAdvisoryRoute
+  '/fr/business/executive-wellbeing': typeof FrBusinessExecutiveWellbeingRoute
+  '/fr/business/founder-wellbeing': typeof FrBusinessFounderWellbeingRoute
+  '/fr/business/leadership-clarity': typeof FrBusinessLeadershipClarityRoute
+  '/fr/business/team-wellbeing': typeof FrBusinessTeamWellbeingRoute
+  '/fr/business/vip-concierge-wellbeing': typeof FrBusinessVipConciergeWellbeingRoute
   '/ar/blog/': typeof ArBlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -506,6 +645,16 @@ export interface FileRoutesByTo {
   '/business/leadership-clarity': typeof BusinessLeadershipClarityRoute
   '/business/team-wellbeing': typeof BusinessTeamWellbeingRoute
   '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/fr/about': typeof FrAboutRoute
+  '/fr/blog': typeof FrBlogRoute
+  '/fr/book': typeof FrBookRoute
+  '/fr/business': typeof FrBusinessRouteWithChildren
+  '/fr/men': typeof FrMenRoute
+  '/fr/privacy': typeof FrPrivacyRoute
+  '/fr/terms': typeof FrTermsRoute
+  '/fr/the-tarkan-approach': typeof FrTheTarkanApproachRoute
+  '/fr/wellbeing': typeof FrWellbeingRoute
+  '/fr/women': typeof FrWomenRoute
   '/men/fatherhood': typeof MenFatherhoodRoute
   '/wellbeing/emotional-balance': typeof WellbeingEmotionalBalanceRoute
   '/wellbeing/life-transitions': typeof WellbeingLifeTransitionsRoute
@@ -514,6 +663,7 @@ export interface FileRoutesByTo {
   '/women/confidence-self-trust': typeof WomenConfidenceSelfTrustRoute
   '/women/motherhood': typeof WomenMotherhoodRoute
   '/ar': typeof ArIndexRoute
+  '/fr': typeof FrIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/business/burnout-prevention': typeof ArBusinessBurnoutPreventionRoute
   '/ar/business/corporate-advisory': typeof ArBusinessCorporateAdvisoryRoute
@@ -522,6 +672,13 @@ export interface FileRoutesByTo {
   '/ar/business/leadership-clarity': typeof ArBusinessLeadershipClarityRoute
   '/ar/business/team-wellbeing': typeof ArBusinessTeamWellbeingRoute
   '/ar/business/vip-concierge-wellbeing': typeof ArBusinessVipConciergeWellbeingRoute
+  '/fr/business/burnout-prevention': typeof FrBusinessBurnoutPreventionRoute
+  '/fr/business/corporate-advisory': typeof FrBusinessCorporateAdvisoryRoute
+  '/fr/business/executive-wellbeing': typeof FrBusinessExecutiveWellbeingRoute
+  '/fr/business/founder-wellbeing': typeof FrBusinessFounderWellbeingRoute
+  '/fr/business/leadership-clarity': typeof FrBusinessLeadershipClarityRoute
+  '/fr/business/team-wellbeing': typeof FrBusinessTeamWellbeingRoute
+  '/fr/business/vip-concierge-wellbeing': typeof FrBusinessVipConciergeWellbeingRoute
   '/ar/blog': typeof ArBlogIndexRoute
 }
 export interface FileRoutesById {
@@ -534,6 +691,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRoute
   '/business': typeof BusinessRouteWithChildren
+  '/fr': typeof FrRouteWithChildren
   '/men': typeof MenRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
@@ -570,6 +728,16 @@ export interface FileRoutesById {
   '/business/leadership-clarity': typeof BusinessLeadershipClarityRoute
   '/business/team-wellbeing': typeof BusinessTeamWellbeingRoute
   '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/fr/about': typeof FrAboutRoute
+  '/fr/blog': typeof FrBlogRoute
+  '/fr/book': typeof FrBookRoute
+  '/fr/business': typeof FrBusinessRouteWithChildren
+  '/fr/men': typeof FrMenRoute
+  '/fr/privacy': typeof FrPrivacyRoute
+  '/fr/terms': typeof FrTermsRoute
+  '/fr/the-tarkan-approach': typeof FrTheTarkanApproachRoute
+  '/fr/wellbeing': typeof FrWellbeingRoute
+  '/fr/women': typeof FrWomenRoute
   '/men/fatherhood': typeof MenFatherhoodRoute
   '/wellbeing/emotional-balance': typeof WellbeingEmotionalBalanceRoute
   '/wellbeing/life-transitions': typeof WellbeingLifeTransitionsRoute
@@ -578,6 +746,7 @@ export interface FileRoutesById {
   '/women/confidence-self-trust': typeof WomenConfidenceSelfTrustRoute
   '/women/motherhood': typeof WomenMotherhoodRoute
   '/ar/': typeof ArIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/business/burnout-prevention': typeof ArBusinessBurnoutPreventionRoute
   '/ar/business/corporate-advisory': typeof ArBusinessCorporateAdvisoryRoute
@@ -586,6 +755,13 @@ export interface FileRoutesById {
   '/ar/business/leadership-clarity': typeof ArBusinessLeadershipClarityRoute
   '/ar/business/team-wellbeing': typeof ArBusinessTeamWellbeingRoute
   '/ar/business/vip-concierge-wellbeing': typeof ArBusinessVipConciergeWellbeingRoute
+  '/fr/business/burnout-prevention': typeof FrBusinessBurnoutPreventionRoute
+  '/fr/business/corporate-advisory': typeof FrBusinessCorporateAdvisoryRoute
+  '/fr/business/executive-wellbeing': typeof FrBusinessExecutiveWellbeingRoute
+  '/fr/business/founder-wellbeing': typeof FrBusinessFounderWellbeingRoute
+  '/fr/business/leadership-clarity': typeof FrBusinessLeadershipClarityRoute
+  '/fr/business/team-wellbeing': typeof FrBusinessTeamWellbeingRoute
+  '/fr/business/vip-concierge-wellbeing': typeof FrBusinessVipConciergeWellbeingRoute
   '/ar/blog/': typeof ArBlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -598,6 +774,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/book'
     | '/business'
+    | '/fr'
     | '/men'
     | '/privacy'
     | '/terms'
@@ -634,6 +811,16 @@ export interface FileRouteTypes {
     | '/business/leadership-clarity'
     | '/business/team-wellbeing'
     | '/business/vip-concierge-wellbeing'
+    | '/fr/about'
+    | '/fr/blog'
+    | '/fr/book'
+    | '/fr/business'
+    | '/fr/men'
+    | '/fr/privacy'
+    | '/fr/terms'
+    | '/fr/the-tarkan-approach'
+    | '/fr/wellbeing'
+    | '/fr/women'
     | '/men/fatherhood'
     | '/wellbeing/emotional-balance'
     | '/wellbeing/life-transitions'
@@ -642,6 +829,7 @@ export interface FileRouteTypes {
     | '/women/confidence-self-trust'
     | '/women/motherhood'
     | '/ar/'
+    | '/fr/'
     | '/ar/blog/$slug'
     | '/ar/business/burnout-prevention'
     | '/ar/business/corporate-advisory'
@@ -650,6 +838,13 @@ export interface FileRouteTypes {
     | '/ar/business/leadership-clarity'
     | '/ar/business/team-wellbeing'
     | '/ar/business/vip-concierge-wellbeing'
+    | '/fr/business/burnout-prevention'
+    | '/fr/business/corporate-advisory'
+    | '/fr/business/executive-wellbeing'
+    | '/fr/business/founder-wellbeing'
+    | '/fr/business/leadership-clarity'
+    | '/fr/business/team-wellbeing'
+    | '/fr/business/vip-concierge-wellbeing'
     | '/ar/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -694,6 +889,16 @@ export interface FileRouteTypes {
     | '/business/leadership-clarity'
     | '/business/team-wellbeing'
     | '/business/vip-concierge-wellbeing'
+    | '/fr/about'
+    | '/fr/blog'
+    | '/fr/book'
+    | '/fr/business'
+    | '/fr/men'
+    | '/fr/privacy'
+    | '/fr/terms'
+    | '/fr/the-tarkan-approach'
+    | '/fr/wellbeing'
+    | '/fr/women'
     | '/men/fatherhood'
     | '/wellbeing/emotional-balance'
     | '/wellbeing/life-transitions'
@@ -702,6 +907,7 @@ export interface FileRouteTypes {
     | '/women/confidence-self-trust'
     | '/women/motherhood'
     | '/ar'
+    | '/fr'
     | '/ar/blog/$slug'
     | '/ar/business/burnout-prevention'
     | '/ar/business/corporate-advisory'
@@ -710,6 +916,13 @@ export interface FileRouteTypes {
     | '/ar/business/leadership-clarity'
     | '/ar/business/team-wellbeing'
     | '/ar/business/vip-concierge-wellbeing'
+    | '/fr/business/burnout-prevention'
+    | '/fr/business/corporate-advisory'
+    | '/fr/business/executive-wellbeing'
+    | '/fr/business/founder-wellbeing'
+    | '/fr/business/leadership-clarity'
+    | '/fr/business/team-wellbeing'
+    | '/fr/business/vip-concierge-wellbeing'
     | '/ar/blog'
   id:
     | '__root__'
@@ -721,6 +934,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/book'
     | '/business'
+    | '/fr'
     | '/men'
     | '/privacy'
     | '/terms'
@@ -757,6 +971,16 @@ export interface FileRouteTypes {
     | '/business/leadership-clarity'
     | '/business/team-wellbeing'
     | '/business/vip-concierge-wellbeing'
+    | '/fr/about'
+    | '/fr/blog'
+    | '/fr/book'
+    | '/fr/business'
+    | '/fr/men'
+    | '/fr/privacy'
+    | '/fr/terms'
+    | '/fr/the-tarkan-approach'
+    | '/fr/wellbeing'
+    | '/fr/women'
     | '/men/fatherhood'
     | '/wellbeing/emotional-balance'
     | '/wellbeing/life-transitions'
@@ -765,6 +989,7 @@ export interface FileRouteTypes {
     | '/women/confidence-self-trust'
     | '/women/motherhood'
     | '/ar/'
+    | '/fr/'
     | '/ar/blog/$slug'
     | '/ar/business/burnout-prevention'
     | '/ar/business/corporate-advisory'
@@ -773,6 +998,13 @@ export interface FileRouteTypes {
     | '/ar/business/leadership-clarity'
     | '/ar/business/team-wellbeing'
     | '/ar/business/vip-concierge-wellbeing'
+    | '/fr/business/burnout-prevention'
+    | '/fr/business/corporate-advisory'
+    | '/fr/business/executive-wellbeing'
+    | '/fr/business/founder-wellbeing'
+    | '/fr/business/leadership-clarity'
+    | '/fr/business/team-wellbeing'
+    | '/fr/business/vip-concierge-wellbeing'
     | '/ar/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -785,6 +1017,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   BookRoute: typeof BookRoute
   BusinessRoute: typeof BusinessRouteWithChildren
+  FrRoute: typeof FrRouteWithChildren
   MenRoute: typeof MenRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
@@ -849,6 +1082,13 @@ declare module '@tanstack/react-router' {
       path: '/business'
       fullPath: '/business'
       preLoaderRoute: typeof BusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr': {
+      id: '/fr'
+      path: '/fr'
+      fullPath: '/fr'
+      preLoaderRoute: typeof FrRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/men': {
@@ -1110,6 +1350,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessVipConciergeWellbeingRouteImport
       parentRoute: typeof BusinessRoute
     }
+    '/fr/': {
+      id: '/fr/'
+      path: '/'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/about': {
+      id: '/fr/about'
+      path: '/about'
+      fullPath: '/fr/about'
+      preLoaderRoute: typeof FrAboutRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog': {
+      id: '/fr/blog'
+      path: '/blog'
+      fullPath: '/fr/blog'
+      preLoaderRoute: typeof FrBlogRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/book': {
+      id: '/fr/book'
+      path: '/book'
+      fullPath: '/fr/book'
+      preLoaderRoute: typeof FrBookRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/business': {
+      id: '/fr/business'
+      path: '/business'
+      fullPath: '/fr/business'
+      preLoaderRoute: typeof FrBusinessRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/men': {
+      id: '/fr/men'
+      path: '/men'
+      fullPath: '/fr/men'
+      preLoaderRoute: typeof FrMenRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/privacy': {
+      id: '/fr/privacy'
+      path: '/privacy'
+      fullPath: '/fr/privacy'
+      preLoaderRoute: typeof FrPrivacyRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/terms': {
+      id: '/fr/terms'
+      path: '/terms'
+      fullPath: '/fr/terms'
+      preLoaderRoute: typeof FrTermsRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/the-tarkan-approach': {
+      id: '/fr/the-tarkan-approach'
+      path: '/the-tarkan-approach'
+      fullPath: '/fr/the-tarkan-approach'
+      preLoaderRoute: typeof FrTheTarkanApproachRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/wellbeing': {
+      id: '/fr/wellbeing'
+      path: '/wellbeing'
+      fullPath: '/fr/wellbeing'
+      preLoaderRoute: typeof FrWellbeingRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/women': {
+      id: '/fr/women'
+      path: '/women'
+      fullPath: '/fr/women'
+      preLoaderRoute: typeof FrWomenRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/men/fatherhood': {
       id: '/men/fatherhood'
       path: '/fatherhood'
@@ -1221,6 +1538,55 @@ declare module '@tanstack/react-router' {
       fullPath: '/ar/business/vip-concierge-wellbeing'
       preLoaderRoute: typeof ArBusinessVipConciergeWellbeingRouteImport
       parentRoute: typeof ArBusinessRoute
+    }
+    '/fr/business/burnout-prevention': {
+      id: '/fr/business/burnout-prevention'
+      path: '/burnout-prevention'
+      fullPath: '/fr/business/burnout-prevention'
+      preLoaderRoute: typeof FrBusinessBurnoutPreventionRouteImport
+      parentRoute: typeof FrBusinessRoute
+    }
+    '/fr/business/corporate-advisory': {
+      id: '/fr/business/corporate-advisory'
+      path: '/corporate-advisory'
+      fullPath: '/fr/business/corporate-advisory'
+      preLoaderRoute: typeof FrBusinessCorporateAdvisoryRouteImport
+      parentRoute: typeof FrBusinessRoute
+    }
+    '/fr/business/executive-wellbeing': {
+      id: '/fr/business/executive-wellbeing'
+      path: '/executive-wellbeing'
+      fullPath: '/fr/business/executive-wellbeing'
+      preLoaderRoute: typeof FrBusinessExecutiveWellbeingRouteImport
+      parentRoute: typeof FrBusinessRoute
+    }
+    '/fr/business/founder-wellbeing': {
+      id: '/fr/business/founder-wellbeing'
+      path: '/founder-wellbeing'
+      fullPath: '/fr/business/founder-wellbeing'
+      preLoaderRoute: typeof FrBusinessFounderWellbeingRouteImport
+      parentRoute: typeof FrBusinessRoute
+    }
+    '/fr/business/leadership-clarity': {
+      id: '/fr/business/leadership-clarity'
+      path: '/leadership-clarity'
+      fullPath: '/fr/business/leadership-clarity'
+      preLoaderRoute: typeof FrBusinessLeadershipClarityRouteImport
+      parentRoute: typeof FrBusinessRoute
+    }
+    '/fr/business/team-wellbeing': {
+      id: '/fr/business/team-wellbeing'
+      path: '/team-wellbeing'
+      fullPath: '/fr/business/team-wellbeing'
+      preLoaderRoute: typeof FrBusinessTeamWellbeingRouteImport
+      parentRoute: typeof FrBusinessRoute
+    }
+    '/fr/business/vip-concierge-wellbeing': {
+      id: '/fr/business/vip-concierge-wellbeing'
+      path: '/vip-concierge-wellbeing'
+      fullPath: '/fr/business/vip-concierge-wellbeing'
+      preLoaderRoute: typeof FrBusinessVipConciergeWellbeingRouteImport
+      parentRoute: typeof FrBusinessRoute
     }
   }
 }
@@ -1362,6 +1728,60 @@ const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
   BusinessRouteChildren,
 )
 
+interface FrBusinessRouteChildren {
+  FrBusinessBurnoutPreventionRoute: typeof FrBusinessBurnoutPreventionRoute
+  FrBusinessCorporateAdvisoryRoute: typeof FrBusinessCorporateAdvisoryRoute
+  FrBusinessExecutiveWellbeingRoute: typeof FrBusinessExecutiveWellbeingRoute
+  FrBusinessFounderWellbeingRoute: typeof FrBusinessFounderWellbeingRoute
+  FrBusinessLeadershipClarityRoute: typeof FrBusinessLeadershipClarityRoute
+  FrBusinessTeamWellbeingRoute: typeof FrBusinessTeamWellbeingRoute
+  FrBusinessVipConciergeWellbeingRoute: typeof FrBusinessVipConciergeWellbeingRoute
+}
+
+const FrBusinessRouteChildren: FrBusinessRouteChildren = {
+  FrBusinessBurnoutPreventionRoute: FrBusinessBurnoutPreventionRoute,
+  FrBusinessCorporateAdvisoryRoute: FrBusinessCorporateAdvisoryRoute,
+  FrBusinessExecutiveWellbeingRoute: FrBusinessExecutiveWellbeingRoute,
+  FrBusinessFounderWellbeingRoute: FrBusinessFounderWellbeingRoute,
+  FrBusinessLeadershipClarityRoute: FrBusinessLeadershipClarityRoute,
+  FrBusinessTeamWellbeingRoute: FrBusinessTeamWellbeingRoute,
+  FrBusinessVipConciergeWellbeingRoute: FrBusinessVipConciergeWellbeingRoute,
+}
+
+const FrBusinessRouteWithChildren = FrBusinessRoute._addFileChildren(
+  FrBusinessRouteChildren,
+)
+
+interface FrRouteChildren {
+  FrAboutRoute: typeof FrAboutRoute
+  FrBlogRoute: typeof FrBlogRoute
+  FrBookRoute: typeof FrBookRoute
+  FrBusinessRoute: typeof FrBusinessRouteWithChildren
+  FrMenRoute: typeof FrMenRoute
+  FrPrivacyRoute: typeof FrPrivacyRoute
+  FrTermsRoute: typeof FrTermsRoute
+  FrTheTarkanApproachRoute: typeof FrTheTarkanApproachRoute
+  FrWellbeingRoute: typeof FrWellbeingRoute
+  FrWomenRoute: typeof FrWomenRoute
+  FrIndexRoute: typeof FrIndexRoute
+}
+
+const FrRouteChildren: FrRouteChildren = {
+  FrAboutRoute: FrAboutRoute,
+  FrBlogRoute: FrBlogRoute,
+  FrBookRoute: FrBookRoute,
+  FrBusinessRoute: FrBusinessRouteWithChildren,
+  FrMenRoute: FrMenRoute,
+  FrPrivacyRoute: FrPrivacyRoute,
+  FrTermsRoute: FrTermsRoute,
+  FrTheTarkanApproachRoute: FrTheTarkanApproachRoute,
+  FrWellbeingRoute: FrWellbeingRoute,
+  FrWomenRoute: FrWomenRoute,
+  FrIndexRoute: FrIndexRoute,
+}
+
+const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
+
 interface MenRouteChildren {
   MenFatherhoodRoute: typeof MenFatherhoodRoute
 }
@@ -1411,6 +1831,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   BookRoute: BookRoute,
   BusinessRoute: BusinessRouteWithChildren,
+  FrRoute: FrRouteWithChildren,
   MenRoute: MenRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
