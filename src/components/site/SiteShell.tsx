@@ -68,7 +68,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         areaServed: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"],
         serviceType: ["Private Wellbeing Advisory", "Wellbeing Coaching", "Executive Wellbeing", "Women's Wellbeing", "Men's Wellbeing"],
       }) }} />
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/95">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
           <Link to={toLocale("/", locale) as any} aria-label="GULFWELLBEING home"><BrandMark /></Link>
           <div className="hidden items-center gap-6 lg:flex" dir="ltr">

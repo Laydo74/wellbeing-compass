@@ -3,7 +3,6 @@ import { ArrowDown, ArrowRight, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
-import hero from "@/assets/gulfwellbeing-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
 import executive from "@/assets/executive-editorial.jpg";
 import stillLife from "@/assets/private-still-life.jpg";
@@ -32,7 +31,7 @@ const posts = [
 function Home() {
   return <SiteShell>
     <section className="grain relative min-h-[92svh] bg-primary text-primary-foreground">
-      <img src={hero} width={1536} height={1024} fetchPriority="high" alt="A poised woman in a quiet contemporary Gulf residence" className="absolute inset-0 h-full w-full object-cover object-[62%_center]" />
+      <img src={sourourPortrait.url} width={768} height={1024} fetchPriority="high" alt="Sourour Tarkan, private wellbeing advisor" className="absolute inset-0 h-full w-full object-cover object-center" />
       <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/65 to-transparent" />
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1600px] items-end px-5 pb-16 pt-36 lg:px-10 lg:pb-20">
         <div className="max-w-4xl">
