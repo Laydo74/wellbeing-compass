@@ -233,7 +233,7 @@ const articles: Record<string, ArticleProps> = {
 
 function Page() {
   const location = useLocation();
-  const slug = location.pathname.startsWith("/fr/blog/") ? location.pathname.split("/").filter(Boolean)[2] : "";
+  const slug = location.pathname.startsWith("/fr/blog/") ? (location.pathname.split("/").filter(Boolean)[2] ?? "") : "";
   const article = articles[slug];
   if (article) return <FrArticle {...article} />;
 

@@ -391,7 +391,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
         <section className="mx-auto max-w-[1100px] px-6 py-16 lg:px-12" dir="rtl">
           <p className="eyebrow text-gold">أسئلة متكررة</p>
           <h2 className="mt-4 font-serif text-4xl md:text-5xl">إجابات على بعض الأسئلة.</h2>
-          <div className="mt-8 border-t border-border">{(faqs.wellbeing||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
+          <div className="mt-8 border-t border-border">{(faqs["wellbeing"]||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
         </section>
       )}
 
@@ -408,7 +408,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           <section className="mx-auto max-w-[1100px] px-6 py-16 lg:px-12" dir="rtl">
             <p className="eyebrow text-gold">الأسئلة الشائعة</p>
             <h2 className="mt-4 font-serif text-4xl md:text-5xl">أجوبة مفيدة قبل أن تبدأ.</h2>
-            <div className="mt-8 border-t border-border">{(faqs.wellbeing||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
+            <div className="mt-8 border-t border-border">{(faqs["wellbeing"]||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
           </section>
           <section className="bg-secondary" dir="rtl">
             <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">

@@ -232,7 +232,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
         <section className="mx-auto max-w-[1100px] px-6 py-16 lg:px-12">
           <p className="eyebrow text-gold">QUESTIONS FRÉQUENTES</p>
           <h2 className="mt-4 font-serif text-4xl md:text-5xl">Quelques réponses utiles.</h2>
-          <div className="mt-8 border-t border-border">{(faqs.wellbeing||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
+          <div className="mt-8 border-t border-border">{(faqs["wellbeing"]||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
         </section>
       )}
 

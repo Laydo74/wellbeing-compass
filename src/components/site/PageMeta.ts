@@ -30,6 +30,11 @@ const TRILINGUAL = new Set<string>([
 ]);
 const NOINDEX = new Set(["/auth", "/admin"]);
 
+type HeadContext = {
+  match: { id: string; pathname: string };
+  matches: Array<{ id: string }>;
+};
+
 const abs = (p: string) => (p === "/" ? `${SITE_URL}/` : `${SITE_URL}${p}`);
 const normalize = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p) || "/";
 const localeOf = (p: string): "ar" | "fr" | "en" =>
@@ -81,7 +86,7 @@ export function pageHead(title: string, description: string, path?: string) {
 }
 
 /** Route head helper: derives the path from the matched route; only the leaf match emits canonical/hreflang. */
-export function pageHeadFor(ctx: HeadCtx, title: string, description: string, explicitPath?: string) {
+export function pageHeadFor(ctx: HeadContext, title: string, description: string, explicitPath?: string) {
   const isLeaf = ctx.matches[ctx.matches.length - 1]?.id === ctx.match.id;
   const routePath = explicitPath ?? ctx.match.pathname;
   return pageHead(title, description, isLeaf ? routePath : undefined);
